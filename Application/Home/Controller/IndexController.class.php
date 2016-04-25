@@ -1,10 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | OneThink [ WE CAN DO IT JUST THINK IT ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// | Author: 王凤建 <wangfengjian8@gmail.com> 
 // +----------------------------------------------------------------------
 
 namespace Home\Controller;
@@ -18,43 +14,7 @@ use Think\Controller;
  */
 class IndexController extends Controller
 {
-
-    //系统首页
-    public function index()
-    {
-        if(is_login()){
-        }
-        hook('homeIndex');
-        $default_url = C('DEFUALT_HOME_URL');//获得配置，如果为空则显示聚合，否则跳转
-        if ($default_url != ''&&strtolower($default_url)!='home/index/index') {
-            redirect(get_nav_url($default_url));
-        }
-
-        $show_blocks = get_kanban_config('BLOCK', 'enable', array(), 'Home');
-
-        $this->assign('showBlocks', $show_blocks);
-
-
-        $enter = modC('ENTER_URL', '', 'Home');
-        $this->assign('enter', get_nav_url($enter));
-
-
-
-
-            $sub_menu['left']= array(array('tab' => 'home', 'title' => L('_SQUARE_'), 'href' =>  U('index'))//,array('tab'=>'rank','title'=>'排行','href'=>U('rank'))
-
-            );
-
-
-        $this->assign('sub_menu', $sub_menu);
-        $this->assign('current', 'home');
-
-
-
-        $this->display();
-    }
-
-    protected function _initialize()
+	protected function _initialize()
     {
 
         /*读取站点配置*/
@@ -66,5 +26,12 @@ class IndexController extends Controller
         }
     }
 
-
+	public function index(){
+		$title=D('index')->getNavigate();
+		$changepics=D('index')->getpics();
+		$this->assign('pics',$changepics);
+		$this->assign('title',$title);
+		$this->assign('newdata',$newdata);
+		$this->display();
+	}
 }

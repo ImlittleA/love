@@ -1,0 +1,43 @@
+/*
+Free Html5 Responsive Templates
+Author: Kimmy Tran
+Author URI: http://www.zerotheme.com/
+*/
+html {
+   -webkit-text-size-adjust: none;
+}
+.video embed,
+.video object,
+.video iframe {
+   width: 100%;
+   height: auto;
+}
+img{
+	max-width:100%;
+	height: auto;
+   	width: auto\9; /* ie8 */
+}
+/*------------------------*/
+@media only screen and (max-width: 984px) and (min-width:768px) {
+	.menu, .menu-row {	background:none;}
+	.menu li a {background:url(../images/menu-row-tail.png) center top repeat-x; height:50px;font-size:17px; line-height:50px; padding:0 40px; }
+	.menu li {margin-right: 10px;margin-bottom: 10px;background:none;}
+	div.slideshow-container, div.slideshow span.image-wrapper {width:420px; height: 420px;}
+}
+@media only screen and (max-width: 767px){
+	.menu, .menu-row {	background:none;}
+	.menu li a {background:url(../images/menu-row-tail.png) center top repeat-x; height:40px;font-size:14px; line-height:40px; padding:0 20px; }
+	.menu li {margin-right: 10px;margin-bottom: 10px;background:none;}
+	.indent-left {padding-left:0px;}
+	.indent-right {padding-right:10px;}
+	 div.caption-container { float:left; margin-left:10px;}
+}
+
+@media only screen and (max-width: 619px) {
+	ul.thumbs li {margin-right:10px;width:80px;}
+ 	a.thumb { width:75px; height:75px;}
+ 	div.slideshow-container, div.slideshow span.image-wrapper {width:300px; height: 300px;}
+}
+@media only screen and (max-width: 320px) {
+	div.slideshow-container, div.slideshow span.image-wrapper {width:200px; height: 200px;}
+}

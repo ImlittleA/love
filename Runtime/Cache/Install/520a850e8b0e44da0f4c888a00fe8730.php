@@ -8,8 +8,8 @@
     <meta name="author" content="">
 
     <!-- zui -->
-    <link href="/v2/Public/zui/css/zui.css" rel="stylesheet">
-    <script src="/v2/Public/static/jquery-1.10.2.min.js"></script>
+    <link href="/love/Public/zui/css/zui.css" rel="stylesheet">
+    <script src="/love/Public/static/jquery-1.10.2.min.js"></script>
 </head>
 
 <body style="background:  rgb(230, 234, 234)">

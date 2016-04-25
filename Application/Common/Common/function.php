@@ -1828,6 +1828,14 @@ function render_picture_path($path)
     return is_bool(strpos($path, 'http://')) ? 'http://' . str_replace('//', '/', $_SERVER['HTTP_HOST'] . '/' . $path) : $path;
 }
 
+function get_pic_path($id,$status=0){
+    $picinfo=M('picture')->where(array('id'=>$id))->find();
+    if($status==0){
+        return render_picture_path($picinfo['path']);
+    }else{
+        return $picinfo;
+    }
+}
 
 function get_area_name($id)
 {
