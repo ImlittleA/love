@@ -349,7 +349,7 @@
             
     <!-- 主体 -->
     <div id="body-container" class="container  common-block">
-        <link type="text/css" rel="stylesheet" href="/love/Application/Forum/Static/css/forum.css"/>
+        <!-- <link type="text/css" rel="stylesheet" href="/love/Application/Forum/Static/css/forum.css"/>
 <?php if(ACTION_NAME != 'edit'): endif; ?>
 <?php if($forum_id == 0): else: ?>
     <div class="forum-header row ">
@@ -383,7 +383,7 @@
         </div>
 
     </div><?php endif; ?>
-
+ -->
         <div class="col-xs-9">
 
             <div class="container-fluid">

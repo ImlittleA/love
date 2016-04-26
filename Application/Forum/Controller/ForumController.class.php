@@ -102,9 +102,15 @@ class ForumController extends AdminController
         $list = D('Forum/ForumType')->getTree();
         $map = array('status' => array('GT', -1), 'type_id' => array('gt', 0));
         $forums = M('Forum')->where($map)->order('sort asc')->field('id as forum_id,title,sort,type_id as pid,status')->select();
-        $list = array_merge($list, $forums);
+        if(is_array($forums) && is_array($list)){
+            $list = array_merge($list, $forums);
+        }else if(is_array($forums) && !is_array($list)){
+            $list = $forums;
+        }
+        
         $list = list_to_tree($list, 'id', 'pid', 'child', 0);
         $this->assign('list', $list);
+        // var_dump($list);die;
         $this->display(T('Application://Forum@Forum/type'));
     }
 

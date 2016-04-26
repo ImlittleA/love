@@ -559,7 +559,7 @@
     </div>
     <script>
         $('[data-role=saveCountSetting]').click(function () {
-            $.post("/love/admin.php", {count_day: $('[name=count_day]').val()}, function (msg) {
+            $.post("/love/admin.php?s=/index/index.html", {count_day: $('[name=count_day]').val()}, function (msg) {
                 handleAjax(msg);
             });
         })
