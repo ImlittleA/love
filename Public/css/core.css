@@ -841,7 +841,7 @@ ul {
   position: fixed;
   left: 0;
   right: 0;
-  background: white;
+  background: #FFC0CB;
   z-index: 999;
 }
 .nav_bar .navbar-nav > li > a {
